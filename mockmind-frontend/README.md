@@ -1,16 +1,29 @@
-# React + Vite
+# MockMind Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains the React and Vite web application for MockMind. It provides account screens, interview setup, the live question-and-answer flow, results, and saved session history.
 
-Currently, two official plugins are available:
+## Run Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+From this directory:
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The development server runs at `http://localhost:5173` and expects the FastAPI backend at `http://localhost:8000` by default. To use another backend URL, create `.env.local`:
 
-## Expanding the ESLint configuration
+```env
+VITE_API_URL=http://localhost:8000
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Commands
+
+```bash
+npm run dev      # Start Vite with hot reload
+npm run lint     # Check the source with ESLint
+npm run build    # Create a production build
+npm run preview  # Serve the production build locally
+```
+
+See the repository [README](../README.md) for backend setup, environment variables, API endpoints, and the complete application flow.
